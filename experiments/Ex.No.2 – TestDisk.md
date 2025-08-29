@@ -160,14 +160,14 @@ To use TestDisk step by step to recover a missing partition and repair a corrupt
 - If you wrote a new partition table to the drive, it is recommended to restart your computer to allow the operating system to recognize the changes.
 ---
 
-## Notes
-> ⚠ **Important:** Always recover files to a **different drive** to avoid overwriting data.  
-> ✅ Preview files before recovery to ensure integrity.  
-> ⏳ Deep Scan may take longer but recovers more files.  
-> 💾 Keep a backup of important recovered files.
-
+## Notes 📌
+> ⚠ **Important:** TestDisk is a free and open-source forensic utility used to recover lost partitions.
+> ✅ It works with multiple file systems (FAT, exFAT, NTFS, ext2/3/4, HFS+, etc).  
+> ⏳ Use TestDisk in read-only mode when possible to avoid altering the original data. 
+> 💾 must follow proper legal procedures and chain-of-custody.
 ---
 
-## References
-- [Wondershare Recoverit Official Website](https://recoverit.wondershare.com/)  
-- Recoverit User Guide / Documentation
+## References 📖
+-  Official TestDisk Documentation – https://www.cgsecurity.org/wiki/TestDisk.
+-  Brian Carrier, "File System Forensic Analysis," Addison-Wesley, 2005.
+-  Eoghan Casey, "Digital Evidence and Computer Crime," Academic Press.
