@@ -37,7 +37,8 @@ Steps to capture RAM using FTK Imager:
 
 <details>
 <summary>View Screenshot</summary>
-<img src="../assets/ftk2.png" alt="Memory Destination" width="600">
+<img src="<img width="1424" height="747" alt="image" src="https://github.com/user-attachments/assets/cb5a348a-5ca8-4f5e-8361-02db4f353dc8" />
+="600">
 </details>
 
 ---
