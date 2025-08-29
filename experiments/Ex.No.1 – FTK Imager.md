@@ -25,7 +25,7 @@ Steps to capture RAM using FTK Imager:
 ### Step 2: Initiate Memory Capture
 - Click **File → Capture Memory...**
 
-images/ftk 1.png
+img src ="https://github.com/omkarreddy652/Digital-Forensic-Lab-experiments/blob/main/images/ftk%201.png?raw=true"
 
 ---
 
