@@ -163,8 +163,10 @@ To use TestDisk step by step to recover a missing partition and repair a corrupt
 ## Notes 📌
 > ⚠ **Important:** TestDisk is a free and open-source forensic utility used to recover lost partitions.
 > 
-> ✅ It works with multiple file systems (FAT, exFAT, NTFS, ext2/3/4, HFS+, etc).  
-> ⏳ Use TestDisk in read-only mode when possible to avoid altering the original data. 
+> ✅ It works with multiple file systems (FAT, exFAT, NTFS, ext2/3/4, HFS+, etc).
+> 
+> ⏳ Use TestDisk in read-only mode when possible to avoid altering the original data.
+> 
 > 💾 must follow proper legal procedures and chain-of-custody.
 ---
 
