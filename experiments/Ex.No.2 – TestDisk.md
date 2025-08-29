@@ -46,7 +46,7 @@ To use TestDisk step by step to recover a missing partition and repair a corrupt
 - Select the [Create] option to generate a log file of the recovery session. This is helpful for future reference or troubleshooting.
 <details>
 <summary>View Screenshot / Animation</summary>
-<img width="1085" height="668" alt="Screenshot 2025-08-29 193402" src="https://github.com/user-attachments/assets/4d78163b-49e4-4804-a1e0-3c5513fca563" />
+<img width="856" height="442" alt="Screenshot 2025-08-29 193402" src="https://github.com/user-attachments/assets/4d78163b-49e4-4804-a1e0-3c5513fca563" />
 </details>
 
 ---
@@ -58,20 +58,20 @@ To use TestDisk step by step to recover a missing partition and repair a corrupt
 
 <details>
 <summary>View Screenshot / Animation</summary>
-<img width="1092" height="672" alt="Screenshot 2025-08-29 193459" src="https://github.com/user-attachments/assets/056225ef-bbe5-491f-8046-4f866c25ea2f" />
+<img width="852" height="485" alt="Screenshot 2025-08-29 193459" src="https://github.com/user-attachments/assets/056225ef-bbe5-491f-8046-4f866c25ea2f" />
 </details>
 
 - Select [Proceed] to move to the next step.
 ---
 
-### Step 3:hoose the Partition Table Type
+### Step 3:  Choose the Partition Table Type
 - TestDisk will automatically suggest the most likely partition table type (e.g., Intel/PC, EFI GPT).
 
 - The default value is usually correct. Confirm the selection by pressing Enter. ⏳
 
 <details>
 <summary>View Screenshot / Animation</summary>
-<img width="1090" height="668" alt="Screenshot 2025-08-29 193538" src="https://github.com/user-attachments/assets/fa7e00c4-4034-4f5b-92c8-d418db81e735" />
+<img width="826" height="435" alt="Screenshot 2025-08-29 193538" src="https://github.com/user-attachments/assets/fa7e00c4-4034-4f5b-92c8-d418db81e735" />
 </details>
 
 ---
@@ -81,7 +81,7 @@ To use TestDisk step by step to recover a missing partition and repair a corrupt
 
 <details>
 <summary>View Screenshot / Animation</summary>
-<img width="1087" height="663" alt="Screenshot 2025-08-29 193619" src="https://github.com/user-attachments/assets/4148bc4a-13c8-4876-9129-2caab1e9420a" />
+<img width="852" height="467" alt="Screenshot 2025-08-29 193619" src="https://github.com/user-attachments/assets/4148bc4a-13c8-4876-9129-2caab1e9420a" />
 </details>
 
 - This will display the current partition table and check for errors or missing partitions.
@@ -93,7 +93,7 @@ To use TestDisk step by step to recover a missing partition and repair a corrupt
 
 <details>
 <summary>View Screenshot / Animation</summary>
-<img width="1087" height="663" alt="Screenshot 2025-08-29 193644" src="https://github.com/user-attachments/assets/dd623e75-b1b1-4726-b724-abb04fddf839" />
+<img width="864" height="446" alt="Screenshot 2025-08-29 193644" src="https://github.com/user-attachments/assets/dd623e75-b1b1-4726-b724-abb04fddf839" />
 </details>
 
 - Select it and press Enter to scan the drive for lost partitions.
