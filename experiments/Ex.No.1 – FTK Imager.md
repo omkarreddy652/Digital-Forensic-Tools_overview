@@ -105,8 +105,13 @@ Steps to capture RAM using FTK Imager:
 </details>
 
 ---
+### Step 5: Evidence Item Information:
+- Enter case details, examiner name, and description.
+- This information is stored in the image metadata (important for documentation).
+- <img width="591" height="482" alt="ftk 7" src="https://github.com/user-attachments/assets/ba8e684b-1d2e-4290-9de4-39d6e9a55c5e" />
 
-### Step 5: Start Imaging
+---
+### Step 6: Start Imaging
 - Click **Finish**, check **Verify images after creation**, click **Start**  
 - ⏳ Time depends on drive size.
 
@@ -114,7 +119,7 @@ Steps to capture RAM using FTK Imager:
 
 ---
 
-### Step 6: Completion and Hash Verification
+### Step 7: Completion and Hash Verification
 - FTK Imager shows **MD5** and **SHA1** for source & image  
 - ✅ Matching hashes confirm integrity.
 
