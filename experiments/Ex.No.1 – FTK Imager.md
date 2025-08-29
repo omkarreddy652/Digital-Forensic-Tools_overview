@@ -116,7 +116,8 @@ Steps to capture RAM using FTK Imager:
 ### Step 6: Completion and Hash Verification
 - FTK Imager shows **MD5** and **SHA1** for source & image  
 - ✅ Matching hashes confirm integrity.
-C:\Users\rohit\OneDrive\Pictures\Screenshots\ftk 9.png
+<img width="591" height="482" alt="ftk 7" src="https://github.com/user-attachments/assets/19a10071-5c2f-4eb0-9b58-36d3e73aed5e" />
+
 ---
 
 ## Notes
