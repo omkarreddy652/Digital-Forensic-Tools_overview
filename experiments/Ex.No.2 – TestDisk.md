@@ -78,7 +78,7 @@ To use TestDisk step by step to recover a missing partition and repair a corrupt
 
 ### Step 4:  Analyze Current Partition Structure
 - From the main menu, choose [Analyse] and press Enter.
-- 
+
 <details>
 <summary>View Screenshot / Animation</summary>
 <img width="1087" height="663" alt="Screenshot 2025-08-29 193619" src="https://github.com/user-attachments/assets/4148bc4a-13c8-4876-9129-2caab1e9420a" />
@@ -108,7 +108,7 @@ To use TestDisk step by step to recover a missing partition and repair a corrupt
 - 
   <details>
 <summary>View Screenshot / Animation</summary>
-<img width="1106" height="670" alt="Screenshot 2025-08-29 193727" src="https://github.com/user-attachments/assets/99feaff2-e9bc-4eca-a602-b94ef8d9040c" />
+<img width="968" height="540" alt="Screenshot 2025-08-29 193727" src="https://github.com/user-attachments/assets/99feaff2-e9bc-4eca-a602-b94ef8d9040c" />
 </details>
 
 - This process can take a long time, as it scans the entire drive, block by block, to find remnants of partition structures.
