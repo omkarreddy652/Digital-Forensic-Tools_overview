@@ -116,7 +116,6 @@ Steps to capture RAM using FTK Imager:
 ### Step 6: Completion and Hash Verification
 - FTK Imager shows **MD5** and **SHA1** for source & image  
 - ✅ Matching hashes confirm integrity.
-<img width="607" height="513" alt="ftk 8" src="https://github.com/user-attachments/assets/1b9778cd-b5b7-413b-bcbe-86d7d62ce228" />
 
 ---
 
@@ -124,6 +123,7 @@ Steps to capture RAM using FTK Imager:
 > ⚠ Always use a **write-blocker**  
 > ✅ Hash verification ensures chain-of-custody  
 > 📁 Image fragmentation helps with large drives  
+<img width="618" height="550" alt="ftk 9" src="https://github.com/user-attachments/assets/71530fae-9979-466e-8340-532f50d7f3bf" />
 
 ---
 
