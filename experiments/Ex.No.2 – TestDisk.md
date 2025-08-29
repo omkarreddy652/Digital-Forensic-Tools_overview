@@ -108,7 +108,7 @@ To use TestDisk step by step to recover a missing partition and repair a corrupt
 - 
   <details>
 <summary>View Screenshot / Animation</summary>
-<img width="968" height="540" alt="Screenshot 2025-08-29 193727" src="https://github.com/user-attachments/assets/99feaff2-e9bc-4eca-a602-b94ef8d9040c" />
+<img width="854" height="430" alt="Screenshot 2025-08-29 193727" src="https://github.com/user-attachments/assets/99feaff2-e9bc-4eca-a602-b94ef8d9040c" />
 </details>
 
 - This process can take a long time, as it scans the entire drive, block by block, to find remnants of partition structures.
@@ -126,7 +126,7 @@ To use TestDisk step by step to recover a missing partition and repair a corrupt
   - **D**: Deleted
 <details>
 <summary>View Screenshot / Animation</summary>
-<img width="1094" height="675" alt="Screenshot 2025-08-29 193818" src="https://github.com/user-attachments/assets/127fb3d6-5646-4200-9ab7-3a75aa54990f" />
+<img width="882" height="454" alt="Screenshot 2025-08-29 193818" src="https://github.com/user-attachments/assets/127fb3d6-5646-4200-9ab7-3a75aa54990f" />
 </details>
 - Ensure that the partitions you want to recover are marked as Primary or Logical (and not deleted).
 ---
@@ -134,12 +134,12 @@ To use TestDisk step by step to recover a missing partition and repair a corrupt
 - Once you are confident the partition structure is correct, select [Write] from the menu.
 <details>
 <summary>View Screenshot / Animation</summary>
-<img width="1104" height="672" alt="Screenshot 2025-08-29 193933" src="https://github.com/user-attachments/assets/235b7303-d90f-467f-b2f4-7ad4722a3368" />
+<img width="832" height="420" alt="Screenshot 2025-08-29 193933" src="https://github.com/user-attachments/assets/235b7303-d90f-467f-b2f4-7ad4722a3368" />
 </details>
 - Confirm the operation by pressing y (for yes). This will write the new partition table to your disk.
 <details>
 <summary>View Screenshot / Animation</summary>
-<img width="1097" height="664" alt="Screenshot 2025-08-29 194024" src="https://github.com/user-attachments/assets/844229ac-566e-4a49-b2e8-392796139fe1" />
+<img width="832" height="420" alt="Screenshot 2025-08-29 194024" src="https://github.com/user-attachments/assets/844229ac-566e-4a49-b2e8-392796139fe1" />
 </details>
 - WARNING: This is a permanent change. Double-check your selections before writing.
 ---
