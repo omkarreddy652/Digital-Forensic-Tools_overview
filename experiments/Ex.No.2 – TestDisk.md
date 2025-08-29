@@ -1,4 +1,4 @@
-# Ex.No.2 — Wondershare Recoverit: Data Recovery Tool Overview
+# Ex.No.2 — TestDisk: Open-Source Data Recovery Tool
 
 ![Recoverit](https://img.shields.io/badge/Recoverit-Latest-green)
 ![Warning](https://img.shields.io/badge/⚠️-Important-red)
@@ -46,7 +46,7 @@ To use TestDisk step by step to recover a missing partition and repair a corrupt
 - Select the [Create] option to generate a log file of the recovery session. This is helpful for future reference or troubleshooting.
 <details>
 <summary>View Screenshot / Animation</summary>
-<img src="../assets/rec1.png" alt="Recoverit Launch" width="600">
+<img width="1085" height="668" alt="Screenshot 2025-08-29 193402" src="https://github.com/user-attachments/assets/4d78163b-49e4-4804-a1e0-3c5513fca563" />
 </details>
 
 ---
@@ -58,7 +58,7 @@ To use TestDisk step by step to recover a missing partition and repair a corrupt
 
 <details>
 <summary>View Screenshot / Animation</summary>
-<img src="../assets/rec2.png" alt="Select Recovery Mode" width="600">
+<img width="1092" height="672" alt="Screenshot 2025-08-29 193459" src="https://github.com/user-attachments/assets/056225ef-bbe5-491f-8046-4f866c25ea2f" />
 </details>
 
 - Select [Proceed] to move to the next step.
@@ -71,7 +71,7 @@ To use TestDisk step by step to recover a missing partition and repair a corrupt
 
 <details>
 <summary>View Screenshot / Animation</summary>
-<img src="../assets/rec1.png" alt="Recoverit Launch" width="600">
+<img width="1090" height="668" alt="Screenshot 2025-08-29 193538" src="https://github.com/user-attachments/assets/fa7e00c4-4034-4f5b-92c8-d418db81e735" />
 </details>
 
 ---
@@ -81,7 +81,7 @@ To use TestDisk step by step to recover a missing partition and repair a corrupt
 - 
 <details>
 <summary>View Screenshot / Animation</summary>
-<img src="../assets/rec4.png" alt="Scan Progress Animation" width="600">
+<img width="1087" height="663" alt="Screenshot 2025-08-29 193619" src="https://github.com/user-attachments/assets/4148bc4a-13c8-4876-9129-2caab1e9420a" />
 </details>
 
 - This will display the current partition table and check for errors or missing partitions.
@@ -93,7 +93,7 @@ To use TestDisk step by step to recover a missing partition and repair a corrupt
 
 <details>
 <summary>View Screenshot / Animation</summary>
-<img src="../assets/rec3.png" alt="Preview Files Animation" width="600">
+<img width="1087" height="663" alt="Screenshot 2025-08-29 193644" src="https://github.com/user-attachments/assets/dd623e75-b1b1-4726-b724-abb04fddf839" />
 </details>
 
 - Select it and press Enter to scan the drive for lost partitions.
@@ -108,7 +108,7 @@ To use TestDisk step by step to recover a missing partition and repair a corrupt
 - 
   <details>
 <summary>View Screenshot / Animation</summary>
-<img src="../assets/rec3.png" alt="Preview Files Animation" width="600">
+<img width="1106" height="670" alt="Screenshot 2025-08-29 193727" src="https://github.com/user-attachments/assets/99feaff2-e9bc-4eca-a602-b94ef8d9040c" />
 </details>
 
 - This process can take a long time, as it scans the entire drive, block by block, to find remnants of partition structures.
@@ -126,7 +126,7 @@ To use TestDisk step by step to recover a missing partition and repair a corrupt
   - **D**: Deleted
 <details>
 <summary>View Screenshot / Animation</summary>
-<img src="../assets/rec3.png" alt="Preview Files Animation" width="600">
+<img width="1094" height="675" alt="Screenshot 2025-08-29 193818" src="https://github.com/user-attachments/assets/127fb3d6-5646-4200-9ab7-3a75aa54990f" />
 </details>
 - Ensure that the partitions you want to recover are marked as Primary or Logical (and not deleted).
 ---
@@ -134,12 +134,12 @@ To use TestDisk step by step to recover a missing partition and repair a corrupt
 - Once you are confident the partition structure is correct, select [Write] from the menu.
 <details>
 <summary>View Screenshot / Animation</summary>
-<img src="../assets/rec3.png" alt="Preview Files Animation" width="600">
+<img width="1104" height="672" alt="Screenshot 2025-08-29 193933" src="https://github.com/user-attachments/assets/235b7303-d90f-467f-b2f4-7ad4722a3368" />
 </details>
 - Confirm the operation by pressing y (for yes). This will write the new partition table to your disk.
 <details>
 <summary>View Screenshot / Animation</summary>
-<img src="../assets/rec3.png" alt="Preview Files Animation" width="600">
+<img width="1097" height="664" alt="Screenshot 2025-08-29 194024" src="https://github.com/user-attachments/assets/844229ac-566e-4a49-b2e8-392796139fe1" />
 </details>
 - WARNING: This is a permanent change. Double-check your selections before writing.
 ---
