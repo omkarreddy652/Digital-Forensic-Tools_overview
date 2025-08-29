@@ -18,7 +18,7 @@
   - [Step 7: Modify Partition Status](#step-7-modify-partition-status)
   - [Step 8: Write the Partition Table](#step-8-write-the-partition-table)
   - [Step 9: Recover Files](#step-9-recover-files)
-  -[Step 10: Exit and Restart](#step-10-exit-and-restart)
+  - [Step 10: Exit and Restart]
 - [Notes](#notes)
 - [References](#references)
 
