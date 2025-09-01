@@ -35,7 +35,7 @@
 - Click the login button. The login will fail, but the data has already been sent across the network.
 
   <p align="center">
-<img width="600" height="400" alt="image" src="../assets/wir2.png" />
+<img width="645" height="420" alt="wir 3" src="https://github.com/user-attachments/assets/52371b26-88cc-4578-8535-4c50f6c7516d" />
  </p>
 
 ---
