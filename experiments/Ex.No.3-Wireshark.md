@@ -10,8 +10,9 @@
 - Select the interface your computer is using to connect to the internet (in this case, Wi-Fi).
 
   <p align="center">
- <img src="../assets/wir1.png" alt="Select Recovery Mode" width="600" height="400">
-  </p>
+<img width="1917" height="995" alt="Screenshot 2025-09-01 140322" src="https://github.com/user-attachments/assets/d2d2f108-c7c4-4802-ac9e-c8635263ca5c" />
+
+</p> 
 
 - Click the blue shark fin icon 🦈 in the top-left corner to start the capture. Wireshark will immediately begin capturing all traffic passing through that interface.
 
