@@ -12,12 +12,12 @@
 - Allow users to select all text with a single button, showing an animated “Copied!” notification for feedback.
 
 <br>
-<img width="600" height="300" alt="image" src="../assets/mai1.png" />
+<img width="620" height="340" alt="mai1" src="https://github.com/user-attachments/assets/8a9185a5-1c37-4d98-839e-d1f4edaeddff" />
 <br>
 orignal message:
 <br>
 <br>
-<img width="600" height="300" alt="image" src="../assets/mail2.png" />
+<img width="600" height="300" alt="mail2" src="https://github.com/user-attachments/assets/5607c1ac-bbbf-4155-9233-5deda972133c" />
 <br>
 <br>
 
@@ -30,7 +30,7 @@ orignal message:
 - Many tools color-code results—green for pass, red for fail. Include micro-animations like icons popping in, checkmarks pulsing, and errors shaking.
 
 <br>
-<img width="600" height="300" alt="image" src="../assets/mail3.png" />
+<img width="845" height="642" alt="mail3" src="https://github.com/user-attachments/assets/8014395c-927d-40e0-a47f-5739eb6ec118" />
 <br>
 
 
@@ -43,7 +43,7 @@ orignal message:
 - Expand delivery path, DKIM details, and errors with slide-down animations.
 
 <br>
-<img width="600" height="400" alt="image" src="../assets/mail4.png" />
+<img width="745" height="564" alt="mail4" src="https://github.com/user-attachments/assets/be240843-f7bf-41c3-a537-c615ee210213" />
 <br>
 <br>
 
@@ -59,7 +59,7 @@ orignal message:
 - Confirm authorized servers and trace the route from sender to recipient.
 
 <br>
-<img width="650" height="250" alt="image" src="../assets/mail5.png" />
+<img width="650" height="250" alt="mail5" src="https://github.com/user-attachments/assets/05be300a-fa22-4c2d-8ef5-fab16573c27a" />
 <br>
 <br>
 
