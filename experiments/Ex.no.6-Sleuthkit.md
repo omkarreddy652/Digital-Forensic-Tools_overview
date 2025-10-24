@@ -59,3 +59,41 @@ To use **The Sleuth Kit (TSK)**, a collection of command-line tools, to analyze 
 ```bash
 # mmls [image_file_name]
 mmls "4Dell Latitude CPi.E01"
+
+---
+
+@echo off
+:: This script runs the full Sleuth Kit analysis for Experiment 6.
+:: It must be run as Administrator.
+
+echo Moving to Sleuth Kit directory...
+cd C:\Users\sleuthkit-4.14.0-win32\bin
+
+echo [STEP 1] Running mmls (List Partitions)...
+mmls.exe "C:\Forensics_Lab\4Dell Latitude CPi.E01"
+
+echo.
+echo [STEP 2] Running fsstat (File System Stats)...
+fsstat.exe -o 63 "C:\Forensics_Lab\4Dell Latitude CPi.E01" > C:\Forensics_Lab\filesystem_info.txt
+
+echo [STEP 3] Running fls (List All Files)...
+fls.exe -r -o 63 "C:\Forensics_Lab\4Dell Latitude CPi.E01" > C:\Forensics_Lab\file_list.txt
+
+echo [STEP 4] Running istat (Get Metadata for Inode 9871)...
+istat.exe -o 63 "C:\Forensics_Lab\4Dell Latitude CPi.E01" 9871 > C:\Forensics_Lab\metadata_Mr_Evil.txt
+
+echo [STEP 5] Running icat (Recover File for Inode 9871)...
+icat.exe -o 63 "C:\Forensics_Lab\4Dell Latitude CPi.E01" 9871 > C:\Forensics_Lab\RECOVERED_Mr_Evil.bmp
+
+echo [STEP 6] Running fls (Create Timeline Body File)...
+fls.exe -m / -r -o 63 "C:\Forensics_Lab\4Dell Latitude CPi.E01" > C:\Forensics_Lab\body.txt
+
+echo [STEP 7] Running mactime (Generate Final Timeline)...
+mactime.pl -b C:\Forensics_Lab\body.txt > C:\Forensics_Lab\timeline.txt
+
+echo.
+echo =========================================================
+echo ANALYSIS COMPLETE.
+echo All output files are saved in your C:\Forensics_Lab folder.
+echo =========================================================
+pause
