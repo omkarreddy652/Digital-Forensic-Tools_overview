@@ -49,7 +49,7 @@ C:\Windows\System32> cd C:\Users\sleuthkit-4.14.0-win32\bin
 <summary>View Command Prompt 🖥️</summary>
 <br>
 <p align="center">
-  <img width="980" height="307" alt="image" src="https://github.com/user-attachments/assets/cc4d137d-46f0-48c5-b1ac-ec173981fe23" />
+  <img width="980" height="96" alt="image" src="https://github.com/user-attachments/assets/bd768c6c-9408-4330-89b9-6e72eaf3f18d" />
 </p>
 </details>
 
@@ -69,7 +69,7 @@ C:\Users\sleuthkit-4.14.0-win32\bin> mmls.exe "C:\Forensics_Lab\4Dell Latitude C
 <summary>View mmls Output 🔍</summary>
 <br>
 <p align="center">
-  <img width="800" alt="mmls command output showing partition offset 63" src="https://github.com/user-attachments/assets/placeholder-image-url" />
+  <img width="980" height="307" alt="image" src="https://github.com/user-attachments/assets/cc4d137d-46f0-48c5-b1ac-ec173981fe23" />
 </p>
 </details>
 
@@ -88,7 +88,7 @@ C:\Users\sleuthkit-4.14.0-win32\bin> fsstat.exe -o 63 "C:\Forensics_Lab\4Dell La
 <summary>View fsstat Output 📊</summary>
 <br>
 <p align="center">
-  <img width="800" alt="fsstat command output showing NTFS details" src="https://github.com/user-attachments/assets/placeholder-image-url" />
+  <img width="1252" height="878" alt="image" src="https://github.com/user-attachments/assets/6b50858f-3826-4b00-89b3-bc029125d2bc" />
 </p>
 </details>
 
@@ -109,7 +109,7 @@ C:\Users\sleuthkit-4.14.0-win32\bin> fls.exe -r -o 63 "C:\Forensics_Lab\4Dell La
 <summary>View file_list.txt Output 📋</summary>
 <br>
 <p align="center">
-  <img width="800" alt="Contents of file_list.txt showing Mr. Evil.bmp" src="https://github.com/user-attachments/assets/placeholder-image-url" />
+  <img width="1120" height="43" alt="image" src="https://github.com/user-attachments/assets/639f5181-39a9-4c35-855a-471b81146948" />
 </p>
 </details>
 
@@ -129,7 +129,7 @@ C:\Users\sleuthkit-4.14.0-win32\bin> istat.exe -o 63 "C:\Forensics_Lab\4Dell Lat
 <summary>View metadata_Mr_Evil.txt Output 📝</summary>
 <br>
 <p align="center">
-  <img width="800" alt="Contents of metadata_Mr_Evil.txt" src="https://github.com/user-attachments/assets/placeholder-image-url" />
+  <img width="1886" height="338" alt="image" src="https://github.com/user-attachments/assets/726eb8d2-3ad3-4913-9631-7bb0deac00be" />
 </p>
 </details>
 
@@ -147,7 +147,7 @@ C:\Users\sleuthkit-4.14.0-win32\bin> icat.exe -o 63 "C:\Forensics_Lab\4Dell Lati
 <summary>View Recovered Image 🖼️</summary>
 <br>
 <p align="center">
-  <img width="600" alt="Recovered image file Mr. Evil.bmp" src="https://github.com/user-attachments/assets/placeholder-image-url" />
+  <img width="1363" height="362" alt="image" src="https://github.com/user-attachments/assets/8a302fb6-52f8-4987-b010-4490ddebb878" />
 </p>
 </details>
 
@@ -171,7 +171,7 @@ C:\Users\sleuthkit-4.14.0-win32\bin> mactime.pl -b C:\Forensics_Lab\body.txt > C
 <summary>View timeline.txt Output ⏳</summary>
 <br>
 <p align="center">
-  <img width="800" alt="mactime timeline output in text file" src="https://github.com/user-attachments/assets/placeholder-image-url" />
+  <img width="1655" height="160" alt="image" src="https://github.com/user-attachments/assets/bd0a0b07-4c8f-47a0-8437-6179b96fba8e" />
 </p>
 </details>
 
