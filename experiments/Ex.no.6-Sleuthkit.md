@@ -49,7 +49,7 @@ C:\Windows\System32> cd C:\Users\sleuthkit-4.14.0-win32\bin
 <summary>View Command Prompt 🖥️</summary>
 <br>
 <p align="center">
-  <img width="800" alt="Command prompt navigated to Sleuth Kit bin" src="https://github.com/user-attachments/assets/placeholder-image-url" />
+  <img width="980" height="307" alt="image" src="https://github.com/user-attachments/assets/cc4d137d-46f0-48c5-b1ac-ec173981fe23" />
 </p>
 </details>
 
