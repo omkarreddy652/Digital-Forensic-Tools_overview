@@ -43,21 +43,20 @@
 
 ```bash
 - C:\Windows\System32> cd C:\Users\sleuthkit-4.14.0-win32\bin
-- <details> <summary>View Command Prompt 🖥️</summary>
-
-
-- <p align="center"> <img width="800" alt="Command prompt navigated to Sleuth Kit bin" src="https://www.google.com/search?q=https://github.com/user-attachments/assets/placeholder-image-url" /> </p> </details>
-
----
-
-### Step 2: List Partitions (mmls)
-- Use the mmls (list partitions) command to view the partition table of the disk image. This is critical for finding the offset (the starting sector) of the partition we want to analyze.
-
-- The path to the image file (C:\Forensics_Lab\4Dell Latitude CPi.E01) must be in quotes.
+<details>
+<summary>View Command Prompt 🖥️</summary>
+<br>
+<p align="center">
+  <img width="800" alt="Command prompt navigated to Sleuth Kit bin" src="https://github.com/user-attachments/assets/placeholder-image-url" />
+</p>
+</details>
+### **Step 2: List Partitions (`mmls`)**
+- Use the `mmls` (list partitions) command to view the partition table of the disk image. This is critical for finding the **offset** (the starting sector) of the partition we want to analyze.
+- The path to the image file (`C:\Forensics_Lab\4Dell Latitude CPi.E01`) must be in quotes.
 
 ```bash
+C:\Users\sleuthkit-4.14.0-win32\bin> mmls.exe "C:\Forensics_Lab\4Dell Latitude CPi.E01"
 
-- C:\Users\sleuthkit-4.14.0-win32\bin> mmls.exe "C:\Forensics_Lab\4Dell Latitude CPi.E01"
 📁 Tip: The output shows the NTFS / exFAT (0x07) partition (Slot 002) starts at sector 63. This is our offset for the next commands.
 
 - <details> <summary>View mmls Output 🔍</summary>
