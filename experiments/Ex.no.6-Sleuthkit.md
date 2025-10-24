@@ -50,6 +50,9 @@
   <img width="800" alt="Command prompt navigated to Sleuth Kit bin" src="https://github.com/user-attachments/assets/placeholder-image-url" />
 </p>
 </details>
+
+---
+
 ### **Step 2: List Partitions (`mmls`)**
 - Use the `mmls` (list partitions) command to view the partition table of the disk image. This is critical for finding the **offset** (the starting sector) of the partition we want to analyze.
 - The path to the image file (`C:\Forensics_Lab\4Dell Latitude CPi.E01`) must be in quotes.
