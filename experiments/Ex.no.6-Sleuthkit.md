@@ -42,141 +42,141 @@
 - Navigate to the `bin` directory inside your Sleuth Kit folder. [cite_start]This is where all the executable tools (`.exe`) are located [cite: 286-287].
 
 ```bash
-C:\Windows\System32> cd C:\Users\sleuthkit-4.14.0-win32\bin
-<details> <summary>View Command Prompt 🖥️</summary>
+- C:\Windows\System32> cd C:\Users\sleuthkit-4.14.0-win32\bin
+- <details> <summary>View Command Prompt 🖥️</summary>
 
 
-<p align="center"> <img width="800" alt="Command prompt navigated to Sleuth Kit bin" src="https://www.google.com/search?q=https://github.com/user-attachments/assets/placeholder-image-url" /> </p> </details>
+- <p align="center"> <img width="800" alt="Command prompt navigated to Sleuth Kit bin" src="https://www.google.com/search?q=https://github.com/user-attachments/assets/placeholder-image-url" /> </p> </details>
 
 ---
 
 ### Step 2: List Partitions (mmls)
-Use the mmls (list partitions) command to view the partition table of the disk image. This is critical for finding the offset (the starting sector) of the partition we want to analyze.
+- Use the mmls (list partitions) command to view the partition table of the disk image. This is critical for finding the offset (the starting sector) of the partition we want to analyze.
 
-The path to the image file (C:\Forensics_Lab\4Dell Latitude CPi.E01) must be in quotes.
+- The path to the image file (C:\Forensics_Lab\4Dell Latitude CPi.E01) must be in quotes.
 
-Bash
+```bash
 
-C:\Users\sleuthkit-4.14.0-win32\bin> mmls.exe "C:\Forensics_Lab\4Dell Latitude CPi.E01"
+- C:\Users\sleuthkit-4.14.0-win32\bin> mmls.exe "C:\Forensics_Lab\4Dell Latitude CPi.E01"
 📁 Tip: The output shows the NTFS / exFAT (0x07) partition (Slot 002) starts at sector 63. This is our offset for the next commands.
 
-<details> <summary>View mmls Output 🔍</summary>
+- <details> <summary>View mmls Output 🔍</summary>
 
 
-<p align="center"> <img width="800" alt="mmls command output showing partition offset 63" src="https://www.google.com/search?q=https://github.com/user-attachments/assets/placeholder-image-url" /> </p> </details>
+- <p align="center"> <img width="800" alt="mmls command output showing partition offset 63" src="https://www.google.com/search?q=https://github.com/user-attachments/assets/placeholder-image-url" /> </p> </details>
 
 ---
 
 ### Step 3: Analyze File System (fsstat)
-Use the fsstat (file system statistics) command to get detailed information about the partition.
+- Use the fsstat (file system statistics) command to get detailed information about the partition.
 
-We use the -o 63 flag to specify the partition offset we just found.
+- We use the -o 63 flag to specify the partition offset we just found.
 
-This command prints the output directly to the screen.
+- This command prints the output directly to the screen.
 
-Bash
+```bash
 
-C:\Users\sleuthkit-4.14.0-win32\bin> fsstat.exe -o 63 "C:\Forensics_Lab\4Dell Latitude CPi.E01"
-<details> <summary>View fsstat Output 📊</summary>
+- C:\Users\sleuthkit-4.14.0-win32\bin> fsstat.exe -o 63 "C:\Forensics_Lab\4Dell Latitude CPi.E01"
+- <details> <summary>View fsstat Output 📊</summary>
 
 
-<p align="center"> <img width="800" alt="fsstat command output showing NTFS details" src="https://www.google.com/search?q=https://github.com/user-attachments/assets/placeholder-image-url" /> </p> </details>
+- <p align="center"> <img width="800" alt="fsstat command output showing NTFS details" src="https://www.google.com/search?q=https://github.com/user-attachments/assets/placeholder-image-url" /> </p> </details>
 
 ---
 
 ### Step 4: List Files and Directories (fls)
-Use the fls (list files) command to recursively list all files and directories in the partition.
+- Use the fls (list files) command to recursively list all files and directories in the partition.
 
 
-We use -r for recursive and pipe the output > to a text file (file_list.txt) for easy review and documentation.
+- We use -r for recursive and pipe the output > to a text file (file_list.txt) for easy review and documentation.
 
-This command will not show any output in the terminal.
+- This command will not show any output in the terminal.
 
-Bash
+```bash
 
-C:\Users\sleuthkit-4.14.0-win32\bin> fls.exe -r -o 63 "C:\Forensics_Lab\4Dell Latitude CPi.E01" > C:\Forensics_Lab\file_list.txt
-You can now open file_list.txt in your C:\Forensics_Lab folder to see all the files.
+- C:\Users\sleuthkit-4.14.0-win32\bin> fls.exe -r -o 63 "C:\Forensics_Lab\4Dell Latitude CPi.E01" > C:\Forensics_Lab\file_list.txt
+- You can now open file_list.txt in your C:\Forensics_Lab folder to see all the files.
 
-<details> <summary>View file_list.txt Output 📋</summary>
+- <details> <summary>View file_list.txt Output 📋</summary>
 
 
-<p align="center"> <img width="800" alt="Contents of file_list.txt showing Mr. Evil.bmp" src="https://www.google.com/search?q=https://github.com/user-attachments/assets/placeholder-image-url" /> </p> </details>
+- <p align="center"> <img width="800" alt="Contents of file_list.txt showing Mr. Evil.bmp" src="https://www.google.com/search?q=https://github.com/user-attachments/assets/placeholder-image-url" /> </p> </details>
 
 ---
 
 ### Step 5: Analyze File Metadata (istat)
-Use the istat (inode statistics) command to get detailed metadata about a specific file, such as its MAC (Modified, Accessed, Changed) times .
+- Use the istat (inode statistics) command to get detailed metadata about a specific file, such as its MAC (Modified, Accessed, Changed) times .
 
 
-From the file_list.txt, we identified an interesting file: Mr. Evil.bmp.
+- From the file_list.txt, we identified an interesting file: Mr. Evil.bmp.
 
-Its inode number (the number before the hyphen) is 9871.
+- Its inode number (the number before the hyphen) is 9871.
 
-We redirect the output to a file for our report.
+- We redirect the output to a file for our report.
 
-Bash
+```bash
 
-C:\Users\sleuthkit-4.14.0-win32\bin> istat.exe -o 63 "C:\Forensics_Lab\4Dell Latitude CPi.E01" 9871 > C:\Forensics_Lab\metadata_Mr_Evil.txt
-<details> <summary>View metadata_Mr_Evil.txt Output 📝</summary>
+- C:\Users\sleuthkit-4.14.0-win32\bin> istat.exe -o 63 "C:\Forensics_Lab\4Dell Latitude CPi.E01" 9871 > C:\Forensics_Lab\metadata_Mr_Evil.txt
+- <details> <summary>View metadata_Mr_Evil.txt Output 📝</summary>
 
 
-<p align="center"> <img width="800" alt="Contents of metadata_Mr_Evil.txt" src="https://www.google.com/search?q=https://github.com/user-attachments/assets/placeholder-image-url" /> </p> </details>
+- <p align="center"> <img width="800" alt="Contents of metadata_Mr_Evil.txt" src="https://www.google.com/search?q=https://github.com/user-attachments/assets/placeholder-image-url" /> </p> </details>
 
 ---
 
 ### Step 6: Recover a File (icat)
-Use the icat (inode cat) command to extract the contents of the file using its inode number .
+- Use the icat (inode cat) command to extract the contents of the file using its inode number .
 
 
-We use the same inode 9871 and redirect the output, saving it directly as a .bmp image.
+- We use the same inode 9871 and redirect the output, saving it directly as a .bmp image.
 
-Bash
+```bash
 
-C:\Users\sleuthkit-4.14.0-win32\bin> icat.exe -o 63 "C:\Forensics_Lab\4Dell Latitude CPi.E01" 9871 > C:\Forensics_Lab\RECOVERED_Mr_Evil.bmp
-<details> <summary>View Recovered Image 🖼️</summary>
+- C:\Users\sleuthkit-4.14.0-win32\bin> icat.exe -o 63 "C:\Forensics_Lab\4Dell Latitude CPi.E01" 9871 > C:\Forensics_Lab\RECOVERED_Mr_Evil.bmp
+- <details> <summary>View Recovered Image 🖼️</summary>
 
 
-<p align="center"> <img width="600" alt="Recovered image file Mr. Evil.bmp" src="https://www.google.com/search?q=https://github.com/user-attachments/assets/placeholder-image-url" /> </p> </details>
+- <p align="center"> <img width="600" alt="Recovered image file Mr. Evil.bmp" src="https://www.google.com/search?q=https://github.com/user-attachments/assets/placeholder-image-url" /> </p> </details>
 
 ---
 
 ### Step 7: Create an Event Timeline (mactime)
-Finally, we create a full timeline of all file activity on the system .
+- Finally, we create a full timeline of all file activity on the system .
 
-First, generate a "body file" using fls. This file lists MAC times for all files .
+- First, generate a "body file" using fls. This file lists MAC times for all files .
 
-Bash
+```bash
 
-C:\Users\sleuthkit-4.14.0-win32\bin> fls.exe -m / -r -o 63 "C:\Forensics_Lab\4Dell Latitude CPi.E01" > C:\Forensics_Lab\body.txt
+- C:\Users\sleuthkit-4.14.0-win32\bin> fls.exe -m / -r -o 63 "C:\Forensics_Lab\4Dell Latitude CPi.E01" > C:\Forensics_Lab\body.txt
 
-Second, use the mactime.pl Perl script to sort the body file into a chronological timeline, saved as a .txt file (which can also be opened in Excel) .
+- Second, use the mactime.pl Perl script to sort the body file into a chronological timeline, saved as a .txt file (which can also be opened in Excel) .
 
-Bash
+```bash
 
-C:\Users\sleuthkit-4.14.0-win32\bin> mactime.pl -b C:\Forensics_Lab\body.txt > C:\Forensics_Lab\timeline.txt
-<details> <summary>View timeline.txt Output ⏳</summary>
+- C:\Users\sleuthkit-4.14.0-win32\bin> mactime.pl -b C:\Forensics_Lab\body.txt > C:\Forensics_Lab\timeline.txt
+- <details> <summary>View timeline.txt Output ⏳</summary>
 
 
-<p align="center"> <img width="800" alt="mactime timeline output in text file" src="https://www.google.com/search?q=https://github.com/user-attachments/assets/placeholder-image-url" /> </p> </details>
+- <p align="center"> <img width="800" alt="mactime timeline output in text file" src="https://www.google.com/search?q=https://github.com/user-attachments/assets/placeholder-image-url" /> </p> </details>
 
 ---
 
 ### ✅ Result
-By following these steps, we successfully used The Sleuth Kit to analyze the 4Dell Latitude CPi.E01 disk image. We were able to:
+- By following these steps, we successfully used The Sleuth Kit to analyze the 4Dell Latitude CPi.E01 disk image. We were able to:
 
-List the partition table (mmls) and identify the correct partition offset (63).
+- List the partition table (mmls) and identify the correct partition offset (63).
 
-Analyze the file system metadata (fsstat).
+- Analyze the file system metadata (fsstat).
 
-List all files and directories, including deleted ones (fls).
+- List all files and directories, including deleted ones (fls).
 
-Inspect the detailed metadata of a target file (istat on inode 9871).
+- Inspect the detailed metadata of a target file (istat on inode 9871).
 
-Successfully recover the file Mr. Evil.bmp (icat).
+- Successfully recover the file Mr. Evil.bmp (icat).
 
-Generate a full chronological timeline of all file system activity (mactime).
+- Generate a full chronological timeline of all file system activity (mactime).
 
-All output files and recovered evidence are now stored in the C:\Forensics_Lab case folder, ready for reporting .
+- All output files and recovered evidence are now stored in the C:\Forensics_Lab case folder, ready for reporting .
 
 ---
 
