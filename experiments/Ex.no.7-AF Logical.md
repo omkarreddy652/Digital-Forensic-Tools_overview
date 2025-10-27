@@ -66,13 +66,6 @@ To use **AFLogical OSE (Open Source Edition)** for logical extraction of data fr
 3. **⚠️ Note on APK:**  
    If the AFLogical OSE ZIP doesn't include the `AFLogical-OSE.apk`, use a digital forensics OS like **Santoku Linux** to extract or build the APK from the source code.
 
-<details>
-<summary>📂 View Folder Structure</summary>
-<br>
-<p align="center">
-  <img width="600" alt="DF folder structure with extracted files" src="https://github.com/omkarreddy652/digital-forensic-tools_overview/blob/main/images/placeholder.txt?raw=true" />
-</p>
-</details>
 
 ---
 
