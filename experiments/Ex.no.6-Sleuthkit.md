@@ -171,7 +171,7 @@ C:\Users\sleuthkit-4.14.0-win32\bin> mactime.pl -b C:\Forensics_Lab\body.txt > C
 <summary>View timeline.txt Output ⏳</summary>
 <br>
 <p align="center">
-  <img width="1655" height="160" alt="image" src="https://github.com/user-attachments/assets/bd0a0b07-4c8f-47a0-8437-6179b96fba8e" />
+  <img width="1441" height="92" alt="image" src="https://github.com/user-attachments/assets/8fb02a2a-82ac-44df-b29b-dfd21eb413f1" />
 </p>
 </details>
 
