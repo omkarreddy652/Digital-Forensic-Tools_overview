@@ -1,206 +1,352 @@
-# Ex.No.7 — AFLogical OSE: Android Logical Data Extraction
+# Ex.No.7 — AFLogical OSE: Extract Data from Android Devices
 
-![AFLogical OSE](https://img.shields.io/badge/Tool-AFLogical_OSE-green)
-![Platform](https://img.shields.io/badge/Platform-Android-lightgrey)
-![Type](https://img.shields.io/badge/Extraction-Logical-blue)
-
----
-
-## Table of Contents
-- [Ex.No.7 — AFLogical OSE: Android Logical Data Extraction](#exno7--aflogical-ose-android-logical-data-extraction)
-  - [Table of Contents](#table-of-contents)
-  - [Aim](#aim)
-  - [🛠️ Prerequisites \& Installation](#️-prerequisites--installation)
-  - [Procedure](#procedure)
-    - [Step 1: Prepare Environment \& Device](#step-1-prepare-environment--device)
-    - [Step 2: Connect Android Device](#step-2-connect-android-device)
-    - [Step 3: Install and Run AFLogical OSE](#step-3-install-and-run-aflogical-ose)
-    - [Step 4: Transfer Extracted Data](#step-4-transfer-extracted-data)
-    - [Step 5: Analyze Extracted Data](#step-5-analyze-extracted-data)
-    - [Step 6: Clean Up](#step-6-clean-up)
-  - [✅ Result](#-result)
-  - [Notes 📌](#notes-)
+![AFLogical OSE](https://img.shields.io/badge/Tool-AFLogical%20OSE-green)
+![Platform](https://img.shields.io/badge/Platform-Android-orange)
+![Type](https://img.shields.io/badge/Analysis-Logical%20Extraction-blue)
 
 ---
 
-## Aim
-To use **AFLogical OSE (Open Source Edition)** to perform a logical extraction of data (like contacts, SMS messages, MMS messages, and call logs) from an Android device.
+## 📑 Table of Contents
+- [🎯 Aim](#-aim)
+- [📝 Description](#-description)
+- [🛠️ Prerequisites & Installation](#️-prerequisites--installation)
+- [📋 Procedure](#-procedure)
+  - [Step 1: Initial Setup & File Extraction](#step-1-initial-setup--file-extraction)
+  - [Step 2: Configure System Environment (PATH)](#step-2-configure-system-environment-path)
+  - [Step 3: Install Google USB Driver (Windows Specific)](#step-3-install-google-usb-driver-windows-specific)
+  - [Step 4: Prepare the Android Device (Developer Options)](#step-4-prepare-the-android-device-developer-options)
+  - [Step 5: Establish and Verify ADB Connection](#step-5-establish-and-verify-adb-connection)
+  - [Step 6: Deploy AFLogical OSE to the Device](#step-6-deploy-aflogical-ose-to-the-device)
+  - [Step 7: Execute Logical Data Extraction](#step-7-execute-logical-data-extraction)
+  - [Step 8: Collect Extracted Data (Pull to PC)](#step-8-collect-extracted-data-pull-to-pc)
+- [✅ Result](#-result)
+- [🔗 Reference Links](#-reference-links)
+- [📝 Notes](#-notes)
+
+---
+
+## 🎯 Aim
+To use **AFLogical OSE (Open Source Edition)** for logical extraction of data from Android devices, retrieving key user data such as contacts, call logs, and SMS messages without requiring root access.
+
+---
+
+## 📝 Description
+**AFLogical OSE (Open Source Edition)** is a specialized forensic tool designed for logical extraction of data from Android devices. This technique retrieves key user data—like contacts, call logs, and SMS messages—by leveraging the Android OS API, and does so typically without requiring root access. It is a fundamental component of the **Open Source Android Forensics toolkit**, essential for investigations and academic studies.
 
 ---
 
 ## 🛠️ Prerequisites & Installation
 
-1. **Download AFLogical OSE:** Obtain the latest release `.apk` file from the official AFLogical OSE GitHub page.
-2. **Install Java:** Ensure Java Development Kit (JDK) is installed on your computer, as ADB often requires it.
-3. **Install Android Debug Bridge (ADB):**
-   - Download ADB Platform Tools from the official Android Developers website.
-   - Extract the tools to a known location (e.g., `C:\platform-tools`).
-   - Add this location to your system's PATH environment variable so you can run `adb` commands from any terminal.
-4. **Enable USB Debugging on Android Device:**
-   - Go to `Settings` > `About Phone`.
-   - Tap `Build Number` seven times until `Developer options` are enabled.
-   - Go back to `Settings` > `System` > `Developer options`.
-   - Enable `USB debugging`.
+### **📦 Required Files (Pre-requisites)**
+- **🔧 Android Platform Tools (ADB):** For device communication
+- **📱 AFLogical OSE ZIP (Source/APK):** The core forensic tool
+- **💻 Google USB Driver (for Windows):** To ensure PC-device connectivity
+
+---
+
+## 📋 Procedure
+
+### Step 1: Initial Setup & File Extraction
+
+**🎯 Purpose:** Set up the working environment and extract necessary files.
+
+**📋 Instructions:**
+1. **📁 Create the primary lab folder:**
+   ```bash
+   C:\DF
+   ```
+
+2. **📦 Extract all downloaded ZIP archives into this folder:**
+   ```bash
+   C:\DF\platform-tools\
+   C:\DF\aflogical-ose\
+   C:\DF\usb-driver\
+   ```
+
+3. **⚠️ Note on APK:**  
+   If the AFLogical OSE ZIP doesn't include the `AFLogical-OSE.apk`, use a digital forensics OS like **Santoku Linux** to extract or build the APK from the source code.
 
 <details>
-<summary>View USB Debugging Option 📱</summary>
+<summary>📂 View Folder Structure</summary>
 <br>
 <p align="center">
-  <img width="400" alt="USB Debugging enabled in Android Developer Options" src="https://github.com/user-attachments/assets/placeholder-image-url" />
+  <img width="600" alt="DF folder structure with extracted files" src="https://github.com/omkarreddy652/digital-forensic-tools_overview/blob/main/images/placeholder.txt?raw=true" />
 </p>
 </details>
 
 ---
 
-## Procedure
+### Step 2: Configure System Environment (PATH)
 
-### Step 1: Prepare Environment & Device
-- Ensure all prerequisites (AFLogical OSE `.apk`, Java, ADB, USB Debugging) are met before starting.
-- Create a dedicated folder for your investigation, for example: `C:\Forensics_Lab\AFLogical_Data`.
-- Verify that your computer can communicate with Android devices via ADB.
+**🎯 Purpose:** To enable the execution of `adb` commands directly from any Command Prompt or PowerShell window without specifying the full directory path.
 
-```bash
-C:\Windows\System32> cd C:\platform-tools
-```
+**📋 Steps:**
+1. **⚙️ Navigate to:**  
+   **Control Panel → System → Advanced system settings → Environment Variables**
 
-📱 **Tip:** Make sure your Android device has Developer Options enabled and USB Debugging is turned on.
+2. **📝 Under *User Variables*, select **Path** and click **Edit**.**
+
+3. **➕ Click **New** and add the path:**
+   ```bash
+   C:\DF\platform-tools
+   ```
 
 <details>
-<summary>View Environment Setup 🛠️</summary>
+<summary>🖼️ View Environment Variables Setup</summary>
 <br>
 <p align="center">
-  <img width="800" alt="Command prompt navigated to platform-tools directory" src="https://github.com/user-attachments/assets/placeholder-image-url" />
+  <img width="610" height="673" alt="Environment Variables Configuration" src="https://github.com/user-attachments/assets/bf3d4690-98b2-4afc-9dcc-1b88deef2e71" />
+</p>
+</details>
+
+4. **✅ Click **OK** to save.**
+
+**🔍 Verification:**
+Open a Command Prompt and run:
+```bash
+adb version
+```
+
+<details>
+<summary>💻 View ADB Version Output</summary>
+<br>
+<p align="center">
+  <img width="1285" height="347" alt="ADB Version Command Output" src="https://github.com/user-attachments/assets/c16b02ed-1e48-4946-a562-043abb3e9e25" />
+</p>
+</details>
+
+**✅ Expected Output:**  
+Displays the ADB version number (e.g., *Android Debug Bridge version 1.0.41*).
+
+---
+
+### Step 3: Install Google USB Driver (Windows Specific)
+
+**🎯 Purpose:** This driver allows Windows to identify and communicate with the connected Android device via ADB.
+
+**📋 Steps:**
+1. **🔌 Connect the Android phone via USB.**
+2. **🔧 Open **Device Manager** and locate the phone.**
+3. **🖱️ Right-click → **Update Driver** → **Browse my computer for drivers**.**
+4. **📂 Specify:**
+   ```bash
+   C:\DF\usb-driver
+   ```
+5. **➡️ Click **Next** to install.**
+
+**🔍 Verification:**
+Run:
+```bash
+adb devices
+```
+
+<details>
+<summary>📱 View Device Connection Status</summary>
+<br>
+<p align="center">
+  <img width="858" height="157" alt="ADB Devices Command Output" src="https://github.com/user-attachments/assets/f84a2449-99e1-4a7f-8854-58f2964be372" />
+</p>
+</details>
+
+**✅ Expected Output:**  
+Device listed without 'offline' or 'no permissions' status.
+
+---
+
+### Step 4: Prepare the Android Device (Developer Options)
+
+**🎯 Purpose:** Enable developer features required for ADB communication.
+
+**📋 Steps:**
+1. **📱 On the device:**  
+   **Settings → About phone → Tap "Build number" 7 times**
+
+2. **🔙 Go back to **Settings → Developer options**.**
+
+3. **✅ Enable:**
+   - 🔧 USB Debugging  
+   - 📦 Install via USB (if available)
+
+<details>
+<summary>📱 View Developer Options</summary>
+<br>
+<p align="center">
+  <img width="400" alt="Android Developer Options Screen" src="https://github.com/omkarreddy652/digital-forensic-tools_overview/blob/main/images/placeholder.txt?raw=true" />
 </p>
 </details>
 
 ---
 
-### Step 2: Connect Android Device
-- Connect the Android device to your computer using a USB cable.
-- Open Command Prompt (`cmd.exe`) or Terminal on your computer.
-- Verify ADB Connection by running the following command. You should see your device listed as 'device'.
+### Step 5: Establish and Verify ADB Connection
 
-```bash
-C:\platform-tools> adb devices
-```
+**🎯 Purpose:** To confirm a stable, authorized communication channel between the PC and Android device.
 
-📱 **Tip:** If prompted on the Android device, allow USB debugging access for your computer. You may need to check "Always allow from this computer".
+**📋 Steps:**
+1. **🔌 Ensure the phone is connected.**
+2. **💻 Run:**
+   ```bash
+   adb devices
+   ```
+3. **📱 Tap **Allow** on the phone when prompted.**
+
+**✅ Expected Output:**
 
 <details>
-<summary>View adb devices Output ✅</summary>
+<summary>🔗 View Authorized Connection</summary>
 <br>
 <p align="center">
-  <img width="600" alt="adb devices command output showing connected device" src="https://github.com/user-attachments/assets/placeholder-image-url" />
+  <img width="858" height="157" alt="ADB Authorized Device Connection" src="https://github.com/user-attachments/assets/3bebf98b-8dab-4d04-ba44-1dc70d7d2d62" />
+</p>
+</details>
+
+**🔧 Troubleshooting:**  
+If *unauthorized*, replug cable and tap **Allow** again.
+
+---
+
+### Step 6: Deploy AFLogical OSE to the Device
+
+**🎯 Purpose:** Transfer and install the forensic APK onto the Android device.
+
+**📋 Steps:**
+1. **📁 Ensure APK is located at:**
+   ```bash
+   C:\DF\aflogical-ose\AFLogical-OSE.apk
+   ```
+
+2. **📦 Install it:**
+   ```bash
+   adb install --bypass-low-target-sdk-block "C:\Users\Manya\Downloads\DF\ForensicLab\AFLogical-OSE_1.5.2.apk"
+   ```
+
+<details>
+<summary>📱 View APK Installation</summary>
+<br>
+<p align="center">
+  <img width="1464" height="183" alt="AFLogical OSE APK Installation" src="https://github.com/user-attachments/assets/b02f289c-3de4-42f5-90c1-518131a6e4f7" />
 </p>
 </details>
 
 ---
 
-### Step 3: Install and Run AFLogical OSE
-- Use ADB to install the AFLogical OSE application onto the connected Android device.
-- Replace `<path_to_apk>` with the actual path to your downloaded `.apk` file.
-- Once installed, you'll need to launch the app and configure extraction settings.
+### Step 7: Execute Logical Data Extraction
 
+**🎯 Purpose:** Initiate data retrieval using AFLogical.
+
+**📋 Steps:**
+1. **📱 Open **AFLogical** on the device.**
+2. **🔐 Grant permissions (Contacts, SMS, Call Logs, Storage).**
+3. **✅ Select:**
+   - 👥 Contacts  
+   - 💬 SMS  
+   - 📞 Call Logs  
+   - 🖼️ MMS  
+   - 📅 Calendar
+
+4. **▶️ Tap **Start Extraction**.**
+5. **⏳ Wait until extraction completes.**
+
+**📂 Default Save Location:**
 ```bash
-C:\platform-tools> adb install "C:\Forensics_Lab\aflogical-ose.apk"
+/sdcard/aflogical/
+```
+or
+```bash
+/storage/emulated/0/aflogical/
 ```
 
-📲 **Tip:** After installation, open the AFLogical OSE app on the Android device and grant all necessary permissions for data access.
-
 <details>
-<summary>View AFLogical OSE Installation 📲</summary>
+<summary>📱 View AFLogical Interface</summary>
 <br>
 <p align="center">
-  <img width="400" alt="AFLogical OSE app interface with data types selected" src="https://github.com/user-attachments/assets/placeholder-image-url" />
+  <img width="400" alt="AFLogical OSE Extraction Interface" src="https://github.com/omkarreddy652/digital-forensic-tools_overview/blob/main/images/placeholder.txt?raw=true" />
 </p>
 </details>
 
 ---
 
-### Step 4: Transfer Extracted Data
-- Use ADB to copy the `aflogical` folder (containing the `.csv` files) from the Android device to your computer.
-- The app saves extracted data into `.csv` files in a folder named `aflogical` on the device's internal storage.
-- Replace `/path/to/destination` with the path to your case folder.
+### Step 8: Collect Extracted Data (Pull to PC)
 
+**🎯 Purpose:** Transfer extracted files from the device to the PC.
+
+**💻 Command:**
 ```bash
-C:\platform-tools> adb pull /sdcard/aflogical "C:\Forensics_Lab\AFLogical_Data"
+adb pull /sdcard/aflogical C:\Users\Manya\Downloads
 ```
 
-💾 **Tip:** Navigate to the destination folder on your computer and confirm that the `aflogical` folder and its `.csv` files have been successfully copied.
-
 <details>
-<summary>View adb pull Command Execution 🖥️</summary>
+<summary>📥 View Data Transfer</summary>
 <br>
 <p align="center">
-  <img width="800" alt="adb pull command transferring aflogical folder" src="https://github.com/user-attachments/assets/placeholder-image-url" />
+  <img width="1358" height="173" alt="ADB Pull Command Execution" src="https://github.com/user-attachments/assets/545baf69-e750-410a-b07a-657d60b91e97" />
 </p>
 </details>
 
----
-
-### Step 5: Analyze Extracted Data
-- Use software like Microsoft Excel, Google Sheets, LibreOffice Calc, or even a simple text editor to open the `.csv` files.
-- The extracted files typically include `contacts.csv`, `sms.csv`, `calllog.csv`, and `mms.csv`.
-- Review the data contents for relevant forensic information.
-
+**🔍 Verification:**
+Files saved to:
 ```bash
-C:\platform-tools> explorer "C:\Forensics_Lab\AFLogical_Data\aflogical"
+C:\Users\Manya\Downloads
 ```
 
-📊 **Tip:** Examine the contents for relevant information like contact details, message contents, call timestamps, and durations. Document any significant findings.
-
 <details>
-<summary>View Sample CSV Data 📊</summary>
+<summary>📁 View Extracted Files</summary>
 <br>
 <p align="center">
-  <img width="800" alt="Sample CSV data opened in spreadsheet software" src="https://github.com/user-attachments/assets/placeholder-image-url" />
-</p>
-</details>
-
----
-
-### Step 6: Clean Up
-- Remove the AFLogical OSE app from the Android device using ADB for security purposes.
-- Disable USB debugging on the device to maintain security.
-- Safely disconnect the USB cable and document the extraction process.
-
-```bash
-C:\platform-tools> adb uninstall com.viaforensics.android.aflogical
-```
-
-🧹 **Tip:** For security, go back into Developer options on the Android device and disable USB debugging after completing the extraction.
-
-<details>
-<summary>View Cleanup Process 🧹</summary>
-<br>
-<p align="center">
-  <img width="600" alt="AFLogical OSE app being uninstalled via ADB" src="https://github.com/user-attachments/assets/placeholder-image-url" />
+  <img width="1254" height="361" alt="Extracted Files in Downloads Folder" src="https://github.com/user-attachments/assets/22f021cb-f711-4268-88cb-eba0ed6c5684" />
 </p>
 </details>
 
 ---
 
 ## ✅ Result
-By following these steps, we successfully used AFLogical OSE to perform a logical extraction of data from the connected Android device. We were able to:
 
-- Prepare the environment and enable USB debugging on the Android device.
-- Connect the device and verify ADB communication.
-- Install AFLogical OSE app and configure data extraction settings.
-- Extract user data (Contacts, SMS, MMS, Call Logs) to CSV format.
-- Transfer the extracted data to the analysis computer using ADB.
-- Analyze the extracted data using standard spreadsheet software.
-- Clean up by removing the app and disabling USB debugging.
+By following these steps, we successfully used AFLogical OSE to perform logical data extraction from an Android device.
 
-All extracted data files are now stored in the `C:\Forensics_Lab\AFLogical_Data` case folder, ready for forensic analysis and reporting.
+🎯 **Key Achievements:**
+- ✅ Successfully configured ADB environment and established device communication
+- ✅ Installed and deployed AFLogical OSE APK to the target Android device
+- ✅ Performed logical extraction of key user data (contacts, SMS, call logs, MMS, calendar)
+- ✅ Successfully transferred extracted data from device to PC for analysis
+- ✅ Completed forensic extraction without requiring root access on the device
+
+**📊 Data Retrieved:**
+- 👥 **Contacts:** Complete contact database with names, numbers, and details
+- 💬 **SMS Messages:** Text message history with timestamps and metadata
+- 📞 **Call Logs:** Incoming, outgoing, and missed call records
+- 🖼️ **MMS:** Multimedia message data and attachments
+- 📅 **Calendar:** Calendar events and appointments
 
 ---
 
-## Notes 📌
+## 🔗 Reference Links
 
-⚠️ **Legality & Permissions:** Ensure you have the legal authority and necessary permissions before extracting data from any device.
+- **🔧 Android Platform Tools (ADB):** [https://developer.android.com/tools/releases/platform-tools](https://developer.android.com/tools/releases/platform-tools)
+- **🐧 Santoku Linux (Source for AFLogical OSE):** [https://sourceforge.net/projects/santoku/](https://sourceforge.net/projects/santoku/)
+- **💻 Google USB Driver (Windows):** [https://developer.android.com/studio/run/win-usb](https://developer.android.com/studio/run/win-usb)
 
-✅ **Logical vs. Physical:** AFLogical OSE performs a logical extraction, accessing data through the operating system's APIs. This is less comprehensive than a physical extraction but doesn't require rooting.
+---
 
-📲 **Device Compatibility:** AFLogical OSE's success may vary depending on the Android version and device manufacturer. Some permissions may be restricted on newer Android versions.
+## 📝 Notes
 
-💾 **Data Location:** The extracted data folder is typically `/sdcard/aflogical`, but this might differ slightly on some devices depending on the Android version and manufacturer customizations.
+⚠️ **Legal Compliance:** Always ensure you have proper authorization before performing forensic extraction on any device. This tool should only be used for legitimate forensic investigations, academic research, or on devices you own.
+
+🔒 **Data Security:** Handle extracted data with appropriate security measures. Forensic data may contain sensitive personal information that must be protected according to relevant privacy laws and regulations.
+
+📱 **Device Compatibility:** AFLogical OSE works best with Android devices running older versions. Some newer Android versions may have enhanced security features that limit logical extraction capabilities.
+
+🔍 **Further Analysis:** The extracted data can be analyzed using various forensic tools such as:
+- **Autopsy** - Open source digital forensics platform
+- **MSAB XRY Mobile Forensics** - Commercial mobile forensics solution
+- **Cellebrite UFED** - Professional mobile forensic extraction tool
+
+---
+
+**🔗 Related Tools:**
+- [Autopsy](https://www.autopsy.com/) - Digital forensics platform
+- [Volatility](https://www.volatilityfoundation.org/) - Memory forensics framework
+- [SIFT Workstation](https://digital-forensics.sans.org/community/downloads) - Forensic analysis toolkit
+
+---
+
+*📅 Last Updated: October 2025*
+*👨‍💻 Author: Digital Forensics Lab*
