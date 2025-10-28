@@ -10,14 +10,14 @@
 - Select the interface your computer is using to connect to the internet (in this case, Wi-Fi).
 
   <p align="center">
-<img width="859" height="620" alt="Screenshot 2025-09-01 140322" src="https://github.com/user-attachments/assets/d2d2f108-c7c4-4802-ac9e-c8635263ca5c" />
+<img width="859"  alt="Screenshot 2025-09-01 140322" src="https://github.com/user-attachments/assets/d2d2f108-c7c4-4802-ac9e-c8635263ca5c" />
 
 </p> 
 
 - Click the blue shark fin icon 🦈 in the top-left corner to start the capture. Wireshark will immediately begin capturing all traffic passing through that interface.
 
   <p align="center">
- <img width="750" height="550" alt="Screenshot 2025-08-31 230148" src="https://github.com/user-attachments/assets/542d082e-68d0-427d-a595-e90c7a25d1c0" />
+ <img width="750"  alt="Screenshot 2025-08-31 230148" src="https://github.com/user-attachments/assets/542d082e-68d0-427d-a595-e90c7a25d1c0" />
 
  </p>
 
@@ -35,7 +35,7 @@
 - Click the login button. The login will fail, but the data has already been sent across the network.
 
   <p align="center">
-<img width="645" height="420" alt="wir 3" src="https://github.com/user-attachments/assets/52371b26-88cc-4578-8535-4c50f6c7516d" />
+<img width="645"  alt="wir 3" src="https://github.com/user-attachments/assets/52371b26-88cc-4578-8535-4c50f6c7516d" />
  </p>
 
 ---
@@ -49,7 +49,7 @@
 - Apply the following filter to find the exact packet and press Enter:
 
   <p align="center">
-<img width="600" height="400" alt="Screenshot (33)" src="https://github.com/user-attachments/assets/9feaba3d-7443-4b27-ad5c-96c0cd9076e0" />
+<img width="600"  alt="Screenshot (33)" src="https://github.com/user-attachments/assets/9feaba3d-7443-4b27-ad5c-96c0cd9076e0" />
  </p>
 
 ---
@@ -66,7 +66,7 @@
 - Inside the "HTML Form URL Encoded" section, you will see the credentials you entered in plaintext.
 
   <p align="center">
-  <img width="856" height="632" alt="Screenshot (34)" src="https://github.com/user-attachments/assets/da7fe228-4fa9-4c43-805a-ed1b2129a955" />
+  <img width="856"  alt="Screenshot (34)" src="https://github.com/user-attachments/assets/da7fe228-4fa9-4c43-805a-ed1b2129a955" />
  </p>
 
 ---
