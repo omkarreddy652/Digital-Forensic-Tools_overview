@@ -49,7 +49,7 @@ C:\Windows\System32> cd C:\Users\sleuthkit-4.14.0-win32\bin
 <summary>View Command Prompt 🖥️</summary>
 <br>
 <p align="center">
-  <img width="980" height="96" alt="image" src="https://github.com/user-attachments/assets/bd768c6c-9408-4330-89b9-6e72eaf3f18d" />
+  <img width="980"  alt="image" src="https://github.com/user-attachments/assets/bd768c6c-9408-4330-89b9-6e72eaf3f18d" />
 </p>
 </details>
 
@@ -69,7 +69,7 @@ C:\Users\sleuthkit-4.14.0-win32\bin> mmls.exe "C:\Forensics_Lab\4Dell Latitude C
 <summary>View mmls Output 🔍</summary>
 <br>
 <p align="center">
-  <img width="980" height="307" alt="image" src="https://github.com/user-attachments/assets/cc4d137d-46f0-48c5-b1ac-ec173981fe23" />
+  <img width="980"  alt="image" src="https://github.com/user-attachments/assets/cc4d137d-46f0-48c5-b1ac-ec173981fe23" />
 </p>
 </details>
 
@@ -88,7 +88,7 @@ C:\Users\sleuthkit-4.14.0-win32\bin> fsstat.exe -o 63 "C:\Forensics_Lab\4Dell La
 <summary>View fsstat Output 📊</summary>
 <br>
 <p align="center">
-  <img width="1252" height="878" alt="image" src="https://github.com/user-attachments/assets/6b50858f-3826-4b00-89b3-bc029125d2bc" />
+  <img width="1252"  alt="image" src="https://github.com/user-attachments/assets/6b50858f-3826-4b00-89b3-bc029125d2bc" />
 </p>
 </details>
 
@@ -109,7 +109,7 @@ C:\Users\sleuthkit-4.14.0-win32\bin> fls.exe -r -o 63 "C:\Forensics_Lab\4Dell La
 <summary>View file_list.txt Output 📋</summary>
 <br>
 <p align="center">
-  <img width="1354" height="986" alt="Screenshot 2025-10-27 130951" src="https://github.com/user-attachments/assets/e0e98ddb-e7ea-4af8-ad34-2f89a1b14fa0" />
+  <img width="1354"  alt="Screenshot 2025-10-27 130951" src="https://github.com/user-attachments/assets/e0e98ddb-e7ea-4af8-ad34-2f89a1b14fa0" />
 </p>
 </details>
 
@@ -129,7 +129,7 @@ C:\Users\sleuthkit-4.14.0-win32\bin> istat.exe -o 63 "C:\Forensics_Lab\4Dell Lat
 <summary>View metadata_Mr_Evil.txt Output 📝</summary>
 <br>
 <p align="center">
-  <img width="986" height="841" alt="image" src="https://github.com/user-attachments/assets/94c3e901-2c15-421e-9213-7a918abbc8fd" />
+  <img width="986"  alt="image" src="https://github.com/user-attachments/assets/94c3e901-2c15-421e-9213-7a918abbc8fd" />
 </p>
 </details>
 
@@ -147,7 +147,7 @@ C:\Users\sleuthkit-4.14.0-win32\bin> icat.exe -o 63 "C:\Forensics_Lab\4Dell Lati
 <summary>View Recovered Image 🖼️</summary>
 <br>
 <p align="center">
-  <img width="1723" height="866" alt="image" src="https://github.com/user-attachments/assets/e25e8de0-c051-467e-9fa0-26e480b466ab" />
+  <img width="1723"  alt="image" src="https://github.com/user-attachments/assets/e25e8de0-c051-467e-9fa0-26e480b466ab" />
 </p>
 </details>
 
@@ -171,7 +171,7 @@ C:\Users\sleuthkit-4.14.0-win32\bin> mactime.pl -b C:\Forensics_Lab\body.txt > C
 <summary>View timeline.txt Output ⏳</summary>
 <br>
 <p align="center">
-  <img width="1441" height="92" alt="image" src="https://github.com/user-attachments/assets/8fb02a2a-82ac-44df-b29b-dfd21eb413f1" />
+  <img width="1441"  alt="image" src="https://github.com/user-attachments/assets/8fb02a2a-82ac-44df-b29b-dfd21eb413f1" />
 </p>
 </details>
 
