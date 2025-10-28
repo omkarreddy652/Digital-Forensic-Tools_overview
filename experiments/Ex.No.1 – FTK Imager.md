@@ -47,7 +47,7 @@ Steps to capture RAM using FTK Imager:
 - Click **Capture Memory** button to start.  
 - ⏳ Progress depends on RAM size.
 
-<img width="1421" height="727" alt="image" src="https://github.com/user-attachments/assets/fcb8ca77-99d4-441c-9502-7f84db4a365f" />
+<img width="1421"  alt="image" src="https://github.com/user-attachments/assets/fcb8ca77-99d4-441c-9502-7f84db4a365f" />
 
 
 ---
@@ -63,7 +63,7 @@ Steps to capture RAM using FTK Imager:
 ### Step 1: Start the Process
 - Go to **File → Create Disk Image...**  
 
-<img width="1422" height="729" alt="ftk 4" src="https://github.com/user-attachments/assets/63d4f83f-9204-4845-bef2-7f7067d39b31" />
+<img width="1422"  alt="ftk 4" src="https://github.com/user-attachments/assets/63d4f83f-9204-4845-bef2-7f7067d39b31" />
 
 
 ---
@@ -81,7 +81,7 @@ Steps to capture RAM using FTK Imager:
 ### Step 3: Select Source Drive
 - Connect via **write-blocker** → select drive → **Finish**
 
-<img width="606" height="460" alt="ftk 5" src="https://github.com/user-attachments/assets/d98fab54-e878-4723-9163-5944cebe151d" />
+<img width="606"  alt="ftk 5" src="https://github.com/user-attachments/assets/d98fab54-e878-4723-9163-5944cebe151d" />
 
 
 ---
@@ -100,7 +100,7 @@ Steps to capture RAM using FTK Imager:
 
 <details>
 <summary>View Screenshot</summary>
-<img width="507" height="398" alt="ftk 10" src="https://github.com/user-attachments/assets/7c3a0660-fdaa-482a-842b-5ca73f8d3474" />
+<img width="507"  alt="ftk 10" src="https://github.com/user-attachments/assets/7c3a0660-fdaa-482a-842b-5ca73f8d3474" />
 
 </details>
 
@@ -108,14 +108,14 @@ Steps to capture RAM using FTK Imager:
 ### Step 5: Evidence Item Information:
 - Enter case details, examiner name, and description.
 - This information is stored in the image metadata (important for documentation).
-- <img width="591" height="482" alt="ftk 7" src="https://github.com/user-attachments/assets/ba8e684b-1d2e-4290-9de4-39d6e9a55c5e" />
+- <img width="591"  alt="ftk 7" src="https://github.com/user-attachments/assets/ba8e684b-1d2e-4290-9de4-39d6e9a55c5e" />
 
 ---
 ### Step 6: Start Imaging
 - Click **Finish**, check **Verify images after creation**, click **Start**  
 - ⏳ Time depends on drive size.
 
-<img width="607" height="513" alt="ftk 8" src="https://github.com/user-attachments/assets/31a5904d-a249-42d0-b028-12ea5cb2fe76" />
+<img width="607"  alt="ftk 8" src="https://github.com/user-attachments/assets/31a5904d-a249-42d0-b028-12ea5cb2fe76" />
 
 ---
 
