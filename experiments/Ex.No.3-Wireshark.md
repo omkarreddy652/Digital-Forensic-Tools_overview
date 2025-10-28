@@ -1,80 +1,250 @@
-#   Ex.No.3   Wireshark – Network Packet Capture and Analysis Tool<br>
+# Ex.No.3 — Wireshark Network Packet Capture and Analysis Tool
 
-# 🌐 Website Used: [http://demo.testfire.net/](http://demo.testfire.net/)
-## Procedure: Capturing Plaintext Passwords
+![Wireshark](https://img.shields.io/badge/Tool-Wireshark-green)
+![Platform](https://img.shields.io/badge/Platform-Cross--Platform-orange)
+![Type](https://img.shields.io/badge/Analysis-Network%20Analysis-blue)
+
+**📚 Course / Lab:** Digital Forensics Lab  
+**🔢 Experiment No.:** 3  
+**📝 Title:** Wireshark – Network Packet Capture and Analysis Tool
+
+---
+
+## 📑 Table of Contents
+
+- [Ex.No.3 — Wireshark Network Packet Capture and Analysis Tool](#exno3--wireshark-network-packet-capture-and-analysis-tool)
+  - [📑 Table of Contents](#-table-of-contents)
+  - [🎯 Aim](#-aim)
+  - [🛠️ Requirements](#️-requirements)
+  - [📝 Description](#-description)
+  - [🌐 Website Used](#-website-used)
+  - [📋 Procedure: Capturing Plaintext Passwords](#-procedure-capturing-plaintext-passwords)
+    - [Step 1: Start Capturing Packets](#step-1-start-capturing-packets)
+    - [Step 2: Generate Login Traffic](#step-2-generate-login-traffic)
+    - [Step 3: Stop Capture and Filter Traffic](#step-3-stop-capture-and-filter-traffic)
+    - [Step 4: Inspect the Packet to Find Credentials](#step-4-inspect-the-packet-to-find-credentials)
+  - [✅ Result](#-result)
+  - [📝 Notes](#-notes)
+
+---
+
+## 🎯 Aim
+To demonstrate how to use **Wireshark** for network packet capture and analysis, specifically focusing on capturing and analyzing plaintext passwords transmitted over HTTP connections to understand network security vulnerabilities.
+
+---
+
+## 🛠️ Requirements
+
+- **💻 Computer with network connectivity**
+- **🔧 Wireshark** (Network Protocol Analyzer)
+- **🌐 Web browser** (Chrome, Firefox, Edge, etc.)
+- **📡 Active network interface** (Wi-Fi or Ethernet)
+- **🎯 Test website** for demonstration purposes
+
+---
+
+## 📝 Description
+Wireshark is a powerful **network protocol analyzer** that allows users to capture and interactively browse the traffic running on a computer network. It is widely used by network administrators, security professionals, and forensic investigators to analyze network communications, troubleshoot network issues, and identify security vulnerabilities. This experiment demonstrates how easily plaintext credentials can be intercepted when transmitted over unsecured HTTP connections.
+
+---
+
+## 🌐 Website Used
+**🔗 Test Site:** [http://demo.testfire.net/](http://demo.testfire.net/)
+
+⚠️ **Note:** This is a deliberately vulnerable web application designed for security testing and educational purposes.
+
+---
+
+## 📋 Procedure: Capturing Plaintext Passwords
 
 ### Step 1: Start Capturing Packets
 
-- First, open Wireshark. You will see a list of all available network interfaces (e.g., "Wi-Fi," "Ethernet").
+**🎯 Purpose:** Initialize Wireshark and begin network traffic capture.
 
-- Select the interface your computer is using to connect to the internet (in this case, Wi-Fi).
+**📋 Instructions:**
 
-  <p align="center">
-<img width="859"  alt="Screenshot 2025-09-01 140322" src="https://github.com/user-attachments/assets/d2d2f108-c7c4-4802-ac9e-c8635263ca5c" />
+1. **🚀 Open Wireshark application.**
 
-</p> 
+2. **📡 You will see a list of all available network interfaces:**
+   - Wi-Fi adapter
+   - Ethernet adapter
+   - Loopback interface
 
-- Click the blue shark fin icon 🦈 in the top-left corner to start the capture. Wireshark will immediately begin capturing all traffic passing through that interface.
+3. **🔍 Select the network interface your computer is using to connect to the internet** (typically Wi-Fi or Ethernet).
 
-  <p align="center">
- <img width="750"  alt="Screenshot 2025-08-31 230148" src="https://github.com/user-attachments/assets/542d082e-68d0-427d-a595-e90c7a25d1c0" />
+<details>
+<summary>🖥️ View Network Interface Selection</summary>
+<br>
+<p align="center">
+  <img width="859" alt="Wireshark interface selection screen" src="https://github.com/user-attachments/assets/d2d2f108-c7c4-4802-ac9e-c8635263ca5c" />
+</p>
+</details>
 
- </p>
+4. **🦈 Click the blue shark fin icon in the top-left corner to start the capture.**
+   - Wireshark will immediately begin capturing all network traffic passing through the selected interface.
+
+<details>
+<summary>📊 View Packet Capture Interface</summary>
+<br>
+<p align="center">
+  <img width="750" alt="Wireshark packet capture in progress" src="https://github.com/user-attachments/assets/542d082e-68d0-427d-a595-e90c7a25d1c0" />
+</p>
+</details>
 
 ---
 
 ### Step 2: Generate Login Traffic
 
-- Open a web browser and navigate to **http://demo.testfire.net/**
+**🎯 Purpose:** Create network traffic containing login credentials for analysis.
 
-- Enter any dummy credentials. For this example, we'll use:
+**📋 Instructions:**
 
-   Username: testuser  
-   Password: password123  
+1. **🌐 Open a web browser and navigate to:** `http://demo.testfire.net/`
 
-- Click the login button. The login will fail, but the data has already been sent across the network.
+2. **👤 Enter dummy credentials for testing:**
+   - **Username:** `testuser`
+   - **Password:** `password123`
 
-  <p align="center">
-<img width="645"  alt="wir 3" src="https://github.com/user-attachments/assets/52371b26-88cc-4578-8535-4c50f6c7516d" />
- </p>
+3. **🔐 Click the login button.**
+   - The login will fail (expected behavior)
+   - However, the credentials have been transmitted over the network
+
+<details>
+<summary>🔐 View Login Process</summary>
+<br>
+<p align="center">
+  <img width="645" alt="Demo website login form with test credentials" src="https://github.com/user-attachments/assets/52371b26-88cc-4578-8535-4c50f6c7516d" />
+</p>
+</details>
 
 ---
 
 ### Step 3: Stop Capture and Filter Traffic
 
-- Return to Wireshark and click the Stop button (the red square).
+**🎯 Purpose:** Stop packet capture and isolate relevant HTTP traffic for analysis.
 
-- In the display filter bar, you need to find the packet containing the login data. Since the form data was sent to the server, we will look for an HTTP POST request.
+**📋 Instructions:**
 
-- Apply the following filter to find the exact packet and press Enter:
+1. **⏹️ Return to Wireshark and click the Stop button** (red square icon).
 
-  <p align="center">
-<img width="600"  alt="Screenshot (33)" src="https://github.com/user-attachments/assets/9feaba3d-7443-4b27-ad5c-96c0cd9076e0" />
- </p>
+2. **🔍 Apply a display filter to find the login packet:**
+   - In the display filter bar, enter appropriate filter criteria
+   - Look for HTTP POST requests containing form data
+   - Press **Enter** to apply the filter
+
+<details>
+<summary>🔍 View Traffic Filtering</summary>
+<br>
+<p align="center">
+  <img width="600" alt="Wireshark display filter for HTTP POST packets" src="https://github.com/user-attachments/assets/9feaba3d-7443-4b27-ad5c-96c0cd9076e0" />
+</p>
+</details>
 
 ---
 
-### Step 4: Inspect the Packet to Find Credentials 
+### Step 4: Inspect the Packet to Find Credentials
 
-- In the filtered packet list, you should see a packet with information like "POST /userinfo.php". Select this packet.
+**🎯 Purpose:** Analyze captured packets to extract plaintext credentials.
 
-- In the Packet Details pane below the list, expand the following sections:
+**📋 Instructions:**
 
-  - Hypertext Transfer Protocol  
-  - HTML Form URL Encoded  
+1. **📋 In the filtered packet list, locate a packet with information like:**
+   - `POST /userinfo.php` or similar endpoint
+   - HTTP protocol designation
 
-- Inside the "HTML Form URL Encoded" section, you will see the credentials you entered in plaintext.
+2. **🔍 Select the relevant packet to view its details.**
 
-  <p align="center">
-  <img width="856"  alt="Screenshot (34)" src="https://github.com/user-attachments/assets/da7fe228-4fa9-4c43-805a-ed1b2129a955" />
- </p>
+3. **📂 In the Packet Details pane, expand the following sections:**
+   - **Hypertext Transfer Protocol**
+   - **HTML Form URL Encoded**
+
+4. **👁️ Inside the "HTML Form URL Encoded" section:**
+   - You will see the credentials transmitted in plaintext
+   - Username and password are clearly visible
+
+<details>
+<summary>🚨 View Credential Extraction</summary>
+<br>
+<p align="center">
+  <img width="856" alt="Packet details showing plaintext credentials in HTTP form data" src="https://github.com/user-attachments/assets/da7fe228-4fa9-4c43-805a-ed1b2129a955" />
+</p>
+</details>
 
 ---
 
 ## ✅ Result
 
-The experiment successfully intercepts the login credentials in a human-readable format. The analysis of the captured POST packet reveals the plaintext data that was transmitted over the network.
+The experiment successfully demonstrates the interception of login credentials in a human-readable format. The analysis of the captured POST packet reveals the plaintext data that was transmitted over the network.
 
-This result confirms the inherent security flaw of the **HTTP protocol**:  
-- Any sensitive data sent over HTTP is transmitted openly.  
-- It is trivial to intercept by an attacker.  
+🎯 **Key Achievements:**
+- ✅ Successfully configured Wireshark for network packet capture
+- ✅ Captured live network traffic during login attempt
+- ✅ Applied appropriate filters to isolate HTTP POST requests
+- ✅ Successfully extracted plaintext credentials from network packets
+- ✅ Demonstrated the security vulnerability of HTTP protocol
+- ✅ Documented the complete packet analysis workflow
+
+**📊 Analysis Summary:**
+- 🔍 **Protocol Analysis:** HTTP POST request containing form data
+- 📝 **Data Extraction:** Clear text username and password identification
+- 🚨 **Security Finding:** Credentials transmitted without encryption
+- 🌐 **Network Forensics:** Complete packet-level analysis of authentication flow
+
+**🛡️ Security Implications:**
+This result confirms the inherent security flaw of the **HTTP protocol**:
+- 🚨 **Vulnerability:** Any sensitive data sent over HTTP is transmitted in plaintext
+- 🎯 **Risk Level:** High - credentials easily intercepted by attackers
+- 🔓 **Exposure:** Network traffic accessible to anyone monitoring the network
+- ⚠️ **Impact:** Complete compromise of user authentication credentials
+
+---
+
+## 📝 Notes
+
+⚠️ **Ethical Considerations:** Only perform packet capture analysis on networks you own or have explicit permission to monitor. Unauthorized network monitoring is illegal in many jurisdictions.
+
+🔒 **Legal Compliance:** Ensure all testing is conducted in controlled environments or with proper authorization. The demo website used is specifically designed for security testing purposes.
+
+🛡️ **Security Best Practices:**
+- Always use HTTPS for transmitting sensitive data
+- Implement proper SSL/TLS encryption for web applications
+- Never transmit passwords in plaintext
+- Use secure authentication mechanisms (OAuth, SAML, etc.)
+- Regular security audits of network communications
+
+💡 **Network Analysis Tips:**
+- **Display Filters:** Master Wireshark's filter syntax for efficient analysis
+- **Protocol Hierarchy:** Use Statistics → Protocol Hierarchy for traffic overview
+- **Follow Streams:** Right-click packets and "Follow TCP Stream" for complete conversations
+- **Time Analysis:** Use time-based filters to focus on specific periods
+
+🔧 **Advanced Wireshark Features:**
+- **Deep Packet Inspection:** Analyze application layer protocols
+- **Statistical Analysis:** Generate network usage reports and graphs
+- **Export Objects:** Extract files transmitted over HTTP/FTP
+- **Decrypt Traffic:** Analyze encrypted traffic with proper certificates
+
+⚡ **Common Filter Examples:**
+- `http.request.method == "POST"` - Show only HTTP POST requests
+- `tcp.port == 80` - Show traffic on port 80 (HTTP)
+- `ip.addr == 192.168.1.100` - Show traffic to/from specific IP
+- `dns` - Show only DNS traffic
+
+🎯 **Professional Applications:**
+- **Network Troubleshooting:** Identify connectivity and performance issues
+- **Security Analysis:** Detect suspicious network activity and intrusions
+- **Forensic Investigation:** Analyze network evidence in incident response
+- **Compliance Auditing:** Verify proper encryption and data handling
+
+---
+
+**🔗 Related Tools:**
+- [tcpdump](https://www.tcpdump.org/) - Command-line packet analyzer
+- [NetworkMiner](https://www.netresec.com/?page=NetworkMiner) - Network forensic analysis tool
+- [Nmap](https://nmap.org/) - Network discovery and security auditing
+- [Burp Suite](https://portswigger.net/burp) - Web application security testing
+
+---
+
+*📅 Last Updated: October 2025*
+*👨‍💻 Author: Digital Forensics Lab*
