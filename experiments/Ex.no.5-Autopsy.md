@@ -88,7 +88,7 @@ Autopsy is a powerful open-source digital forensics platform used for analyzing 
 <summary>🆕 View New Case Creation</summary>
 <br>
 <p align="center">
-  <img width="1710" height="1077" alt="Autopsy new case creation interface" src="https://github.com/user-attachments/assets/e702156f-9e75-4493-8f90-40a4e803d662" />
+  <img width="1710" alt="Autopsy new case creation interface" src="https://github.com/user-attachments/assets/e702156f-9e75-4493-8f90-40a4e803d662" />
 </p>
 </details>
 
@@ -103,7 +103,7 @@ Autopsy is a powerful open-source digital forensics platform used for analyzing 
 <summary>📝 View Case Information Form</summary>
 <br>
 <p align="center">
-  <img width="974" height="575" alt="Case information form with details" src="https://github.com/user-attachments/assets/58a5eee8-92a5-435c-8ba9-f02b1c9654b2" />
+  <img width="974"  alt="Case information form with details" src="https://github.com/user-attachments/assets/58a5eee8-92a5-435c-8ba9-f02b1c9654b2" />
 </p>
 </details>
 
@@ -137,7 +137,7 @@ Autopsy is a powerful open-source digital forensics platform used for analyzing 
 <summary>📁 View Data Source Selection</summary>
 <br>
 <p align="center">
-  <img width="1705" height="1068" alt="Data source selection and configuration interface" src="https://github.com/user-attachments/assets/f1f069b8-fc11-43ba-8bd6-63cf30615a11" />
+  <img width="1705"  alt="Data source selection and configuration interface" src="https://github.com/user-attachments/assets/f1f069b8-fc11-43ba-8bd6-63cf30615a11" />
 </p>
 </details>
 
@@ -165,7 +165,7 @@ Autopsy is a powerful open-source digital forensics platform used for analyzing 
 <summary>📊 View Analysis Progress and Results</summary>
 <br>
 <p align="center">
-  <img width="1710" height="1074" alt="Autopsy analysis interface showing progress and artifacts" src="https://github.com/user-attachments/assets/bf0d8448-b6c4-4e7f-8e5c-d1c9e23cf3e5" />
+  <img width="1710"  alt="Autopsy analysis interface showing progress and artifacts" src="https://github.com/user-attachments/assets/bf0d8448-b6c4-4e7f-8e5c-d1c9e23cf3e5" />
 </p>
 </details>
 
@@ -201,7 +201,7 @@ Autopsy is a powerful open-source digital forensics platform used for analyzing 
 <summary>🔍 View Detailed Analysis Interface</summary>
 <br>
 <p align="center">
-  <img width="1708" height="1070" alt="Detailed analysis interface showing various forensic modules" src="https://github.com/user-attachments/assets/39d8aab8-51bb-4706-9b1e-e1d5905ff9df" />
+  <img width="1708"  alt="Detailed analysis interface showing various forensic modules" src="https://github.com/user-attachments/assets/39d8aab8-51bb-4706-9b1e-e1d5905ff9df" />
 </p>
 </details>
 
@@ -247,7 +247,7 @@ Autopsy is a powerful open-source digital forensics platform used for analyzing 
 <summary>📄 View Final Forensic Report</summary>
 <br>
 <p align="center">
-  <img width="1919" height="1148" alt="Complete forensic report with detailed findings" src="https://github.com/user-attachments/assets/27ed43d7-1d14-49cd-aa1f-31530cc80f8f" />
+  <img width="1919" alt="Complete forensic report with detailed findings" src="https://github.com/user-attachments/assets/27ed43d7-1d14-49cd-aa1f-31530cc80f8f" />
 </p>
 </details>
 
