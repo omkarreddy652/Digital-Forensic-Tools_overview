@@ -13,7 +13,8 @@ This repository contains the lab exercises for the **Digital Forensics Laborator
 <a href="https://github.com/omkarreddy652/Digital-Forensic-Tools_overview/blob/main/experiments/Ex.no.5-Autopsy.md" target="_blank">Ex.No.5 – Autopsy</a> 
 <br> 
 <a href="https://github.com/omkarreddy652/Digital-Forensic-Tools_overview/blob/main/experiments/Ex.no.6-Sleuthkit.md" target="_blank">Ex.No.6 – Sleuthkit</a> 
-<a href="https://github.com/omkarreddy652/Digital-Forensic-Tools_overview/blob/main/experiments/Ex.no.6-Sleuthkit.md" target="_blank">Ex.No.6 – Sleuthkit</a> 
+<br> 
+<a href="https://github.com/omkarreddy652/Digital-Forensic-Tools_overview/blob/main/experiments/Ex.no.7-AF%20Logical.md" target="_blank">Ex.No.7 – AF%20Logical</a> 
 <a href="https://github.com/omkarreddy652/Digital-Forensic-Tools_overview/blob/main/experiments/Ex.no.6-Sleuthkit.md" target="_blank">Ex.No.6 – Sleuthkit</a> 
 <a href="https://github.com/omkarreddy652/Digital-Forensic-Tools_overview/blob/main/experiments/Ex.no.6-Sleuthkit.md" target="_blank">Ex.No.6 – Sleuthkit</a> 
 <a href="https://github.com/omkarreddy652/Digital-Forensic-Tools_overview/blob/main/experiments/Ex.no.6-Sleuthkit.md" target="_blank">Ex.No.6 – Sleuthkit</a> 
