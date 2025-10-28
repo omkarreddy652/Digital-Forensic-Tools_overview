@@ -18,5 +18,6 @@ This repository contains the lab exercises for the **Digital Forensics Laborator
 <br>
 <a href="https://github.com/omkarreddy652/Digital-Forensic-Tools_overview/blob/main/experiments/Ex.no.8-StegExpose.md" target="_blank">Ex.No.8 – StegExpose</a> 
 <br>
-<a href="https://github.com/omkarreddy652/Digital-Forensic-Tools_overview/blob/main/experiments/Ex.no.6-Sleuthkit.md" target="_blank">Ex.No.6 – Sleuthkit</a> 
+<a href="https://github.com/omkarreddy652/Digital-Forensic-Tools_overview/blob/main/experiments/Ex.no.9-Process%20Explorer.md" target="_blank">Ex.No.9 – Process%20Explorer</a> 
+<br>
 <a href="https://github.com/omkarreddy652/Digital-Forensic-Tools_overview/blob/main/experiments/Ex.no.6-Sleuthkit.md" target="_blank">Ex.No.6 – Sleuthkit</a> 
